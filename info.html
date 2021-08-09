@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Louisa Xu- Info</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="normalize.css">
+    <script src="info.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>WEB222 Final Project</h1>
+    </header>
+    <main id="grid">
+        <input type="hidden" name="lastName" id="lastName" value="Xu" />
+        <input type="hidden" name="studentId" id="studentId" value="161968185" />
+
+        <nav id="nav">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="honesty.html">Home</a></li>
+                <li><a href="info.html" class="current">Sign Up</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+            </ul>
+        </nav>
+
+        <div id="sign-up">
+            <h3>Sign Up</h3>
+            <form action="https://httpbin.org/post" method="POST" name="signup" onsubmit="return formValidation()">
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" id="first-name" required="required"/><br />
+
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" required="required" /><br />
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required="required" /><br />
+
+                <label for="confirm-pwd">Confirm Password</label>
+                <input type="password" name="confirm-pwd" id="confirm-pwd" required="required" /><br />
+
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" required="required" /><br />
+
+                <label for="education">Education Level</label>
+                <select name="education" id="education" required="required">
+                    <option value="">- select -</option>
+                    <option value="technical">Technical Diploma</option>
+                    <option value="college">College Diploma</option>
+                    <option value="bachelor">Bachelor's Degree</option>
+                    <option value="master">Master's Degree</option>
+                    <option value="other">Others</option>
+                </select><br />
+
+                <label for="graduated">Eduction Status</label>
+                <input type="radio" name="status" id="graduated" required="required"/><label for="graduated">Graduated</label>
+                <input type="radio" name="status" id="enrolled" /><label for="enrolled">Currently enrolled</label>
+                <input type="radio" name="status" id="not-graduated" /><label for="not-graduated">Did not graduate</label><br />
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required="required" /><br />
+
+                <label for="age">Age</label>
+                <input type="number" name="age" id="age" min="18" max="60" required="required" /><br />
+
+                <input type="submit" id="submit" value="Submit" />
+                <input type="reset" id="reset" value="Clear" />
+            </form>
+        </div>
+        <div id="side">
+           <p class="error" id="error-msg1" hidden></p>
+           <p class="error" id="error-msg2" hidden></p>
+           <p class="error" id="error-msg3" hidden></p>
+        </div>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2021 Louisa Xu. All rights reserved.</p>
+    </footer>
+
+
+</body>
